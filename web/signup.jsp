@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>AUTOMATIC QUESTION PAPER GENERATOR:: Teacher</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		
+		<link rel="stylesheet" href="style/css/bootstrap.min.css">
+		<link href="style/css/styles.css" rel="stylesheet">
+   
+		<script src="style/js/bootstrap.js"></script>
+		<script src="style/js/bootstrap.min.js"></script>
+        </head>
+
+    <body style="background-color: #202028">
+<nav class="navbar navbar-inverse" style="background: #343446;min-height: 85px;">
+            <div class="container-fluid">
+                            <div class="navbar-header">
+        <a class="navbar-brand" href="#" style="font-size: 40px; margin: -10px; padding-left: 0px; font-family:klavika; color:#E3B1B1"><span><img src="logo-home.png"height="70px" width="80px" margin="-7px"> Automatic Question Paper Generation System</span></a>
+        </div>
+        <ul class="nav navbar-nav">
+            
+      </ul>
+        </div>
+</nav>
+    <div class="container">
+
+        <div class="signup-form-container">
+    
+         <!-- form start -->
+         <form role="form" action="signupServlet" method="post" id="register-form" autocomplete="off">
+         <h1 style="color:#ffffff;font-size: 44px; padding-left:10px; font-weight: bold; font-family: Georgia; margin-top: 10px; text-align: left;">Registration Form</h1>
+        
+         
+         <div class="form-body">
+                      
+            <div class="form-group" style="margin-top: 50px;"> 
+            <label for="firstName" class="col-sm-2 control-label" style="color: #B29D9D;font-size: 20px;">Full name</label>
+                   <div class="input-group col-sm-4" >
+                    <div class="input-group-addon" ><span class="glyphicon glyphicon-user"></span></div>
+                   <input required name="name" id="firstname" type="text" class="form-control" placeholder="Full name">
+                   </div>
+                   <span class="help-block" id="error"></span>
+              </div>
+                        
+              <div class="form-group">
+              <label for="Email" class="col-sm-2 control-label" style="color: #B29D9D;font-size: 20px;">Email</label>
+                   <div class="input-group col-sm-4">
+                   <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                   <input required name="email" type="email" class="form-control" placeholder="Email">
+                   </div> 
+                   <span class="help-block" id="error"></span>                     
+              </div>
+             
+             <div class="form-group">
+             <label for="UserName" class="col-sm-2 control-label" style="color: #B29D9D;font-size: 20px;">Username</label>
+                   <div class="input-group col-sm-4">
+                   <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                   <input required name="username" type="text" class="form-control" placeholder="username" autofocus>
+                   </div> 
+                   
+			 <% String str= request.getParameter("flag"); if(str!=null){%>
+						<div class="alert alert-danger">
+							<strong>invalid username ! try to another </strong>
+						</div>	
+				<%}%>								   
+              </div>      
+                  <div class="form-group">
+                   <label for="password" class="col-sm-2 control-label" style="color: #B29D9D;font-size: 20px;">Password</label>
+                        <div class="input-group col-sm-4">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input required name="password" id="password" type="password" class="form-control" placeholder="*******">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                </div>
+                            
+                   <div class="form-group">
+                   <label for="psconfirm" class="col-sm-2 control-label" style="color: #B29D9D;font-size: 20px;">Confirm password</label>
+                        <div class="input-group col-sm-4">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input required name="repassword" type="password" class="form-control" placeholder="********"autofocus>
+                        </div>
+							<div class="input-group col-md-4">
+								<span class="label label-warning">re-enter password</span>
+								<% String mpass= request.getParameter("mispass"); if(mpass!=null){%>
+						<div class="alert alert-danger">
+							<strong>type same password </strong>
+						</div>	
+				<%}%>
+                        </div>                 
+                   </div>
+                            
+             
+             <div class="form-group">
+                   <label for="clgname" class="col-sm-2 control-label" style="color: #B29D9D;font-size: 20px;">College name</label>
+                   <div class="input-group col-sm-4">
+                   <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
+                   <input required name="collegename" type="text" class="form-control" placeholder="college name">
+                   </div> 
+                   <span class="help-block" id="error"></span>                     
+              </div>
+                        
+                        
+            </div>
+            
+            <div class="form-footer" style="padding-left:15PX;">
+                 <button type="submit" class="btn btn-primary btn-xs" style="padding-left: 2px;">
+                 <span class="glyphicon glyphicon-log-in"></span> Sign Me Up !
+                 </button>
+                
+
+            </div>
+
+
+            </form>
+            
+           </div>
+              
+ </div>
+        
+        
+        
+		<script src="style/jquery/jquery-2.1.3.min.js"></script>
+		<script src="style/js/bootstrap.min.js"></script>
+		<script src="style/js/scripts.js"></script>
+    </body>
+</html>
